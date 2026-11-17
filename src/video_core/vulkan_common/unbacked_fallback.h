@@ -12,7 +12,7 @@ namespace Vulkan {
 /// caught Metroid Prime 4's 1408x256x1008 BC1 and BC6H light volumes (173 and 346 MiB), which
 /// then sampled as zero and drew the world black.
 constexpr u64 MaxBackedImageTexels = u64{1} << 28;
-constexpr u64 MaxBackedImageBytes = u64{1} << 30;
+constexpr u64 MaxBackedImageBytes = u64{4} << 30;
 
 constexpr bool IsTooLargeToBack(u64 texels, u64 bytes) {
     return texels > MaxBackedImageTexels && bytes > MaxBackedImageBytes;
